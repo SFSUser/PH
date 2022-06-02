@@ -16,6 +16,7 @@ import 'animate.css';
 export default class BasePage extends Component<any, any> {  
     static contextType = MainContext;
     private templateRef = null;
+    private templateRef2 = null;
 
     constructor(props){
         super(props);
@@ -23,6 +24,7 @@ export default class BasePage extends Component<any, any> {
             name: "NOMBRE"
         };
         this.templateRef = React.createRef();
+        this.templateRef2 = React.createRef();
     }
 
     componentDidMount(){
@@ -37,12 +39,12 @@ export default class BasePage extends Component<any, any> {
         return index;
     }
 
-    private export() {
+    private export(ref, types) {
         let me = this;
         me.setState({
             busy: true
         });
-        html2canvas(me.templateRef.current, {
+        html2canvas(ref.current, {
             //allowTaint: true,
             logging: true,
             //taintTest: false,
@@ -50,7 +52,7 @@ export default class BasePage extends Component<any, any> {
         }).then(canvas =>{
             let a = document.createElement("a");
             a.href = canvas.toDataURL();
-            a.download=me.state.name +".png";
+            a.download = types + "_" + me.state.name.toLoweCase() +".png";
             a.target="_blank";
             a.click();
             a.remove();
@@ -98,11 +100,11 @@ export default class BasePage extends Component<any, any> {
                     </InputGroup>
 
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export()}>
+                        <Button variant='success' onClick={e=>me.export(me.templateRef, "profile")}>
                             <I.Download/> Guardar imagen
                         </Button>
                     </div>
-
+                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
                     <div ref={me.templateRef}>
                         <div className="template template-1">
                             <div className="pacto-nombre">
@@ -115,6 +117,19 @@ export default class BasePage extends Component<any, any> {
                                 {!have_o && <span className="paloma"></span>}
                             </div>
                         </div>
+                    </div>
+                    <h1 className="color-2 text-center">GENERAR POSTER</h1>
+                    <div ref={me.templateRef2}>
+                        <div className="template template-2">
+                            <span>
+                                {me.state.name}
+                            </span>
+                        </div>
+                    </div>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export(me.templateRef2, "poster")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
                     </div>
                     <div className="text-center">
                         <b>Créditos: </b>Sam F.S.

@@ -1,6 +1,7 @@
 
+$purple: #911886;
 $colors: #f29d00, #00297d, #e0040b, #40a32d, #911886;
-$templates: "/img/template1.png","https://i.imgur.com/Txa2yHl.png";
+$templates: "/img/template1.png","/img/template2.png";
 
 @for $i from 1 through length($colors) {
     $c: nth($colors, $i);
@@ -22,18 +23,37 @@ $templates: "/img/template1.png","https://i.imgur.com/Txa2yHl.png";
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
+
 .template {
+    margin-bottom: 10px;
+    border-radius: 10px;
     display:inline-block;
     text-align: center;
     background-size: cover;
     width: 700px;
-    height: 700px;
 
     @for $i from 1 through length($templates) {
         $c: nth($templates, $i);
         &-#{$i} {
             background-image: url($c);
         }
+    }
+}
+
+.template-1{
+    height: 700px;
+}
+
+.template-2 {
+    height: 900px;
+    padding-top: 110px;
+    padding-right: 20px;
+    span {
+        font-weight: 400;
+        opacity: 1;
+        font-size: 70px;
+        color: red;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
 
