@@ -83,7 +83,7 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador Pacto Sabroso - Pacto Histórico</title>
                 </Helmet>
                 <div className="fixer">
-                    <p className="mt-3 mb-3">
+                    <p className="mt-3 mb-3 text-center">
                         <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
                     </p>
                     <h5 className="text-center">
@@ -98,13 +98,12 @@ export default class BasePage extends Component<any, any> {
                             onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
                             />
                     </InputGroup>
-
+                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export(me.templateRef, "profile")}>
                             <I.Download/> Guardar imagen
                         </Button>
                     </div>
-                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
                     <div ref={me.templateRef}>
                         <div className="template template-1">
                             <div className="pacto-nombre">
@@ -119,17 +118,17 @@ export default class BasePage extends Component<any, any> {
                         </div>
                     </div>
                     <h1 className="color-2 text-center">GENERAR POSTER</h1>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export(me.templateRef2, "poster")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
                     <div ref={me.templateRef2}>
                         <div className="template template-2">
                             <span>
                                 {me.state.name}
                             </span>
                         </div>
-                    </div>
-                    <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export(me.templateRef2, "poster")}>
-                            <I.Download/> Guardar imagen
-                        </Button>
                     </div>
                     <div className="text-center">
                         <b>Créditos: </b>Sam F.S.
