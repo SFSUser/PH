@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import { Button, FormControl, InputGroup, Navbar } from 'react-bootstrap';
+import { Button, Card, FormControl, InputGroup, Navbar } from 'react-bootstrap';
 import { MainContext } from '../context/MainContext';
 import * as I from 'react-feather';
 import Helmet from 'react-helmet';
@@ -134,25 +134,29 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador de Nombres del Pacto Histórico - Pacto Sabroso</title>
                 </Helmet>
                 <div className="fixer">
-                    <p className="mt-3 mb-3 text-center info-text">
-                        <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
-                    </p>
-                    <h5 className="text-center">
-                        Escribe tu nombre sabroso:
-                    </h5>
-                    <div className="input-container-ph">
-                        <InputGroup className="mb-3 mt-3">
-                            <InputGroup.Text id="basic-addon1">Nombre</InputGroup.Text>
-                            <FormControl
-                                size='lg'
-                                type="text" 
-                                maxLength={10}
-                                value={me.state?.name} 
-                                onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
-                                />
-                        </InputGroup>
-                    </div>
-                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <Card className="mt-3">
+                        <Card.Body>
+                            <p className="mt-3 mb-3 text-center info-text">
+                                <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
+                            </p>
+                            <h5 className="text-center">
+                                Escribe tu nombre sabroso:
+                            </h5>
+                            <div className="input-container-ph">
+                                <InputGroup className="mb-3 mt-3">
+                                    <FormControl
+                                        size='lg'
+                                        type="text"
+                                        placeholder="Escribir nombre" 
+                                        maxLength={10}
+                                        value={me.state?.name} 
+                                        onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
+                                        />
+                                </InputGroup>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export("profile")}>
                             <I.Download/> Guardar imagen
@@ -163,7 +167,7 @@ export default class BasePage extends Component<any, any> {
                             {me.pactoNombre()}
                         </div>
                     </div>
-                    <h1 className="color-2 text-center">GENERAR POSTER</h1>
+                    <h1 className="color-4 text-center">GENERAR POSTER</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export( "poster")}>
                             <I.Download/> Guardar imagen
@@ -176,7 +180,7 @@ export default class BasePage extends Component<any, any> {
                             </span>
                         </div>
                     </div>
-                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3"> 
                         <input className="d-none" ref={me.inputFileRef} type="file" id="file_photo" onChange={e=>me.preview_image(e)} name="item_image"  />
                         <Button className="m-2" variant='success' onClick={e=>me.selectImage()}>
@@ -193,7 +197,7 @@ export default class BasePage extends Component<any, any> {
                             </span>
                         </div>
                     </div>
-                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export("profile4")}>
                             <I.Download/> Guardar imagen
@@ -204,7 +208,7 @@ export default class BasePage extends Component<any, any> {
                             {me.pactoNombre()}
                         </div>
                     </div>
-                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export("profile5")}>
                             <I.Download/> Guardar imagen
@@ -220,7 +224,7 @@ export default class BasePage extends Component<any, any> {
                     <div className="text-center">
                         <b>Créditos: </b>Sam F.S. y Emerson F.S.
                     </div>
-                    <h1 className="color-3 text-center">POR FAVOR DIFUNDIR</h1>
+                    <h1 className="color-4 text-center">POR FAVOR DIFUNDIR</h1>
                     <div className="p-2 text-center">
                         <TwitterShareButton title={INVITACION} url={location.href} children={
                             <Button className="m-2">
