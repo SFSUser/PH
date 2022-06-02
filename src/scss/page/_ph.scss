@@ -1,7 +1,12 @@
 
 $purple: #911886;
-$colors: #f29d00, #00297d, #e0040b, #40a32d, #911886;
-$templates: "/img/template1.png","/img/template2.png";
+$green: #40a32d;
+$red: #e0040b;
+$blue: #00297d;
+$orange: #f29d00;
+
+$colors: $orange, $blue, $red, $green, $purple;
+$templates: "/img/template1.png","/img/template2.png","/img/template3.png";
 
 @for $i from 1 through length($colors) {
     $c: nth($colors, $i);
@@ -53,6 +58,30 @@ $templates: "/img/template1.png","/img/template2.png";
         opacity: 1;
         font-size: 70px;
         color: red;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.pefil-foto{
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.template-3 {
+    height: 700px;
+    padding-top: 570px;
+    padding-left: 30px;
+    text-align: left!important;
+    padding-right: 20px;
+    background-size: contain!important;
+    margin-bottom: 0px;
+    span {
+        font-weight: 400;
+        opacity: 1;
+        font-size: 70px;
+        color: $purple;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }

@@ -40,6 +40,8 @@ export default class BasePage extends Component<any, any> {
     static contextType = MainContext;
     private templateRef = null;
     private templateRef2 = null;
+    private templateRef3 = null;
+    private inputFileRef = null;
 
     constructor(props){
         super(props);
@@ -48,6 +50,8 @@ export default class BasePage extends Component<any, any> {
         };
         this.templateRef = React.createRef();
         this.templateRef2 = React.createRef();
+        this.templateRef3 = React.createRef();
+        this.inputFileRef = React.createRef();
     }
 
     componentDidMount(){
@@ -83,6 +87,21 @@ export default class BasePage extends Component<any, any> {
                 busy: false
             });
         });
+    }
+
+    private preview_image(event){
+        let me = this;
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = me.templateRef3.current;
+            output.style.backgroundImage = "url('" + reader.result + "')";
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    private selectImage(){
+        let me = this;
+        me.inputFileRef.current?.click();
     }
 
     render (){
@@ -156,8 +175,25 @@ export default class BasePage extends Component<any, any> {
                             </span>
                         </div>
                     </div>
+                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <div className="text-center mb-3"> 
+                        <input className="d-none" ref={me.inputFileRef} type="file" id="file_photo" onChange={e=>me.preview_image(e)} name="item_image"  />
+                        <Button className="m-2" variant='success' onClick={e=>me.selectImage()}>
+                            <I.Folder/> Cargar foto
+                        </Button>
+                        <Button className="m-2" variant='success' onClick={e=>me.export(me.templateRef3, "avatar")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
+                    <div className="pefil-foto" ref={me.templateRef3}>
+                        <div className="template template-3">
+                            <span>
+                                {me.state.name}
+                            </span>
+                        </div>
+                    </div>
                     <div className="text-center">
-                        <b>Créditos: </b>Sam F.S.
+                        <b>Créditos: </b>Sam F.S. y Emerson F.S.
                     </div>
                     <h1 className="color-3 text-center">POR FAVOR DIFUNDIR</h1>
                     <div className="p-2 text-center">
