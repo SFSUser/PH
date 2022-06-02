@@ -75,9 +75,23 @@ $templates: "/img/template1.png","/img/template2.png";
     display:inline-block;
 }
 
+.input-container-ph{
+    max-width: 400px;
+    margin:auto;
+}
+
 .z-1 {
     z-index: 1;
 }
 .z-0 {
     z-index: 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .template {
+        transform: scale(0.8);
+    }
+    .info-text {
+        font-size: 30px;
+    }
 }

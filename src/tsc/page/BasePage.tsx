@@ -83,21 +83,24 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador Pacto Sabroso - Pacto Histórico</title>
                 </Helmet>
                 <div className="fixer">
-                    <p className="mt-3 mb-3 text-center">
+                    <p className="mt-3 mb-3 text-center info-text">
                         <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
                     </p>
                     <h5 className="text-center">
                         Escribe tu nombre sabroso:
                     </h5>
-                    <InputGroup className="mb-3 mt-3">
-                        <InputGroup.Text id="basic-addon1">Nombre</InputGroup.Text>
-                        <FormControl
-                            type="text" 
-                            maxLength={10}
-                            value={me.state?.name} 
-                            onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
-                            />
-                    </InputGroup>
+                    <div className="input-container-ph">
+                        <InputGroup className="mb-3 mt-3">
+                            <InputGroup.Text id="basic-addon1">Nombre</InputGroup.Text>
+                            <FormControl
+                                size='lg'
+                                type="text" 
+                                maxLength={10}
+                                value={me.state?.name} 
+                                onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
+                                />
+                        </InputGroup>
+                    </div>
                     <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
                         <Button variant='success' onClick={e=>me.export(me.templateRef, "profile")}>

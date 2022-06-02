@@ -83,3 +83,12 @@ body {
         }
     }
 }
+
+@media only screen and (max-width: 550px) {
+    .fixer {
+        max-width: auto;
+    }
+    .base-page{
+        width: fit-content;
+    }
+}
