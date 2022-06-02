@@ -1,0 +1,21 @@
+.loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:  white;
+    text-align: center;
+    padding-top: 15%;
+    z-index: 100;
+
+    h3 {
+        margin-top: 5px;
+    }
+
+    &__translucid {
+        opacity: 0.8;
+    }
+}

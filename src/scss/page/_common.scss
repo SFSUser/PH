@@ -1,0 +1,52 @@
+.base-page {
+    padding-bottom: 100px;
+}
+
+.main-menu {
+    z-index: 100;
+    position: fixed;
+    max-width: 400px;
+    top: 10px;
+    left: 10px;
+}
+.main-menu-locker {
+    background-color: rgba(110, 109, 109, 0.555);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+.content-description{
+    p {
+        margin-bottom: 2px;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .main-menu {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        left: 0px;
+    }
+    .mobil {
+        display: block !important;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .desktop-logo { 
+        flex-direction: column !important;
+    }
+
+    .desktop-logo-login {    
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+    }
+}

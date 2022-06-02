@@ -1,0 +1,81 @@
+$templates: (
+    "template": 400, 
+    "medium": 500,
+    "bold": 700
+);
+
+
+body {
+    background-blend-mode: overlay !important;
+    background-color: gainsboro !important;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.fixer{
+    max-width: $page-width;
+    margin: auto;
+}
+
+.fixer-enrollment{
+    max-width: $page-enrollment-width;
+    margin: auto;
+}
+
+.fixer-recovery{
+    max-width: $page-recovery-width;
+    margin: auto;
+}
+
+.fixer-home{
+    max-width: $page-home-width;
+    margin: auto;
+}
+
+.section-box {
+    border-left: blue solid 5px;
+}
+
+.module-box {
+    margin-top: 3px;;
+    border-left: red solid 2px !important;
+}
+
+.course-image {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.module-image {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.notice-image {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.disqus-container {
+    max-height: 500px;
+    overflow-y: scroll;
+    #disqus_recommendations {
+        display: none;
+    }
+}
+
+.locker {
+    top: 0;
+    position: fixed;
+    background-color: #0000006b;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding-top: 5%;
+    }
+}
