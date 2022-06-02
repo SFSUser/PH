@@ -45,9 +45,8 @@ export default class BasePage extends Component<any, any> {
             //taintTest: false,
             //onrendered: save /*0.4.1*/
         }).then(canvas =>{
-            let data = canvas.toDataURL();
             let a = document.createElement("a");
-            a.href = data;
+            a.href = canvas.toDataURL();
             a.download=me.state.name +".png";
             a.target="_blank";
             a.click();
@@ -60,6 +59,13 @@ export default class BasePage extends Component<any, any> {
         let have_o = me.state?.name?.includes("O");
         return (
             <div className="base-page">
+                {me.state?.busy &&
+                    <div className="locker">
+                        <div className="container">
+                            Generando... por favor espera
+                        </div>
+                    </div>
+                }
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Generador Pacto Sabroso - Pacto Histórico</title>
