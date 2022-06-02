@@ -98,9 +98,24 @@ export default class BasePage extends Component<any, any> {
         me.inputFileRef.current?.click();
     }
 
-    render (){
+    private pactoNombre(){
         let me = this;
         let have_o = me.state?.name?.includes("O");
+        return (
+            <div className="pacto-nombre">
+                {me.state?.name?.split("")?.map( (l, i) => 
+                    l == "O" ? 
+                    <span key={i} className="letra-o">%</span>
+                    :
+                    <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
+                )}
+                {!have_o && <span className="paloma"></span>}
+            </div>
+        );
+    }
+
+    render (){
+        let me = this;
         return (
             <div className="base-page">
                 {me.state?.busy &&
@@ -145,15 +160,7 @@ export default class BasePage extends Component<any, any> {
                     </div>
                     <div ref={me.getRef("profile")}>
                         <div className="template template-1">
-                            <div className="pacto-nombre">
-                                {me.state?.name?.split("")?.map( (l, i) => 
-                                    l == "O" ? 
-                                    <span key={i} className="letra-o">Ñ</span>
-                                    :
-                                    <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
-                                )}
-                                {!have_o && <span className="paloma"></span>}
-                            </div>
+                            {me.pactoNombre()}
                         </div>
                     </div>
                     <h1 className="color-2 text-center">GENERAR POSTER</h1>
@@ -184,6 +191,30 @@ export default class BasePage extends Component<any, any> {
                             <span>
                                 {me.state.name}
                             </span>
+                        </div>
+                    </div>
+                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile4")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
+                    <div ref={me.getRef("profile4")}>
+                        <div className="template template-4">
+                            {me.pactoNombre()}
+                        </div>
+                    </div>
+                    <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile5")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
+                    <div ref={me.getRef("profile5")}>
+                        <div className="template template-5">
+                            <div className="pacto-nombre">
+                                <span>{me.state.name}</span>
+                            </div>
                         </div>
                     </div>
                     <div className="text-center">
