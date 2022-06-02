@@ -1,6 +1,6 @@
 
 $colors: #f29d00, #00297d, #e0040b, #40a32d, #911886;
-$templates: "/dist/img/template1.png","https://i.imgur.com/Txa2yHl.png";
+$templates: "/img/template1.png","https://i.imgur.com/Txa2yHl.png";
 
 @for $i from 1 through length($colors) {
     $c: nth($colors, $i);
@@ -42,13 +42,13 @@ $templates: "/dist/img/template1.png","https://i.imgur.com/Txa2yHl.png";
     background-repeat: no-repeat;
     color:transparent;
     background-size: contain;
-    background-image: url('/dist/img/paloma.png');
+    background-image: url('/img/paloma.png');
     display:inline-block;
 }
 
 .paloma {
     background-size: cover;
-    background-image: url('/dist/img/paloma.png');
+    background-image: url('/img/paloma.png');
     height: 80px;
     width: 80px;
     margin-bottom: 70px;
