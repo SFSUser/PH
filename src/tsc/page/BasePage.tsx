@@ -62,7 +62,7 @@ export default class BasePage extends Component<any, any> {
             <div className="base-page">
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Pacto Historico</title>
+                    <title>Generador Pacto Sabroso - Pacto Histórico</title>
                 </Helmet>
                 <div className="fixer">
                     <h5 className="text-center">
