@@ -39,6 +39,9 @@ export default class BasePage extends Component<any, any> {
 
     private export() {
         let me = this;
+        me.setState({
+            busy: true
+        });
         html2canvas(me.templateRef.current, {
             //allowTaint: true,
             logging: true,
@@ -51,6 +54,9 @@ export default class BasePage extends Component<any, any> {
             a.target="_blank";
             a.click();
             a.remove();
+            me.setState({
+                busy: false
+            });
         });
     }
 
@@ -62,7 +68,11 @@ export default class BasePage extends Component<any, any> {
                 {me.state?.busy &&
                     <div className="locker">
                         <div className="container">
-                            Generando... por favor espera
+                            <div className="card text-center">
+                                <img height={70} width={70} src="/img/paloma.png"/>
+                                <h1>Generando sabrosura...</h1>
+                                <h1>Por favor espera</h1>
+                            </div>
                         </div>
                     </div>
                 }
@@ -71,6 +81,9 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador Pacto Sabroso - Pacto Histórico</title>
                 </Helmet>
                 <div className="fixer">
+                    <p className="mt-3 mb-3">
+                        <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
+                    </p>
                     <h5 className="text-center">
                         Escribe tu nombre sabroso:
                     </h5>
