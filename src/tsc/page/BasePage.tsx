@@ -52,7 +52,7 @@ export default class BasePage extends Component<any, any> {
         }).then(canvas =>{
             let a = document.createElement("a");
             a.href = canvas.toDataURL();
-            a.download = types + "_" + me.state.name.toLoweCase() +".png";
+            a.download = types + "_" + me.state.name.toLowerCase() +".png";
             a.target="_blank";
             a.click();
             a.remove();
