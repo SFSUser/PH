@@ -10,25 +10,13 @@ import 'animate.css';
 
 const INVITACION = "Generador de foto de perfil #pactosabroso #pactohistorico (Nombres)"
 import {
-  EmailShareButton,
   FacebookShareButton,
-  HatenaShareButton,
-  InstapaperShareButton,
   LineShareButton,
   LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
   PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
   TelegramShareButton,
-  TumblrShareButton,
   TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
   WhatsappShareButton,
-  WorkplaceShareButton
 } from "react-share";
 
 /**
@@ -38,24 +26,28 @@ import {
  */
 export default class BasePage extends Component<any, any> {  
     static contextType = MainContext;
-    private templateRef = null;
-    private templateRef2 = null;
-    private templateRef3 = null;
     private inputFileRef = null;
+    private templateRefs: any;
 
     constructor(props){
         super(props);
         this.state = {
             name: "NOMBRE"
         };
-        this.templateRef = React.createRef();
-        this.templateRef2 = React.createRef();
-        this.templateRef3 = React.createRef();
+        this.templateRefs = {};
         this.inputFileRef = React.createRef();
     }
 
     componentDidMount(){
         let me = this;
+    }
+
+    private getRef(name: string){
+        let me = this;
+        if(!me.templateRefs[name]){
+            me.templateRefs[name] = React.createRef();
+        }
+        return me.templateRefs[name];
     }
 
     private getColor(index: number): number {
@@ -66,11 +58,12 @@ export default class BasePage extends Component<any, any> {
         return index;
     }
 
-    private export(ref, types) {
+    private export(types) {
         let me = this;
         me.setState({
             busy: true
         });
+        let ref = me.getRef(types);
         html2canvas(ref.current, {
             //allowTaint: true,
             logging: true,
@@ -93,7 +86,8 @@ export default class BasePage extends Component<any, any> {
         let me = this;
         var reader = new FileReader();
         reader.onload = function(){
-            var output = me.templateRef3.current;
+            var ref = me.getRef("avatar");
+            var output = ref.current;
             output.style.backgroundImage = "url('" + reader.result + "')";
         }
         reader.readAsDataURL(event.target.files[0]);
@@ -145,11 +139,11 @@ export default class BasePage extends Component<any, any> {
                     </div>
                     <h1 className="color-2 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export(me.templateRef, "profile")}>
+                        <Button variant='success' onClick={e=>me.export("profile")}>
                             <I.Download/> Guardar imagen
                         </Button>
                     </div>
-                    <div ref={me.templateRef}>
+                    <div ref={me.getRef("profile")}>
                         <div className="template template-1">
                             <div className="pacto-nombre">
                                 {me.state?.name?.split("")?.map( (l, i) => 
@@ -164,11 +158,11 @@ export default class BasePage extends Component<any, any> {
                     </div>
                     <h1 className="color-2 text-center">GENERAR POSTER</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export(me.templateRef2, "poster")}>
+                        <Button variant='success' onClick={e=>me.export( "poster")}>
                             <I.Download/> Guardar imagen
                         </Button>
                     </div>
-                    <div ref={me.templateRef2}>
+                    <div ref={me.getRef("poster")}>
                         <div className="template template-2">
                             <span>
                                 {me.state.name}
@@ -181,11 +175,11 @@ export default class BasePage extends Component<any, any> {
                         <Button className="m-2" variant='success' onClick={e=>me.selectImage()}>
                             <I.Folder/> Cargar foto
                         </Button>
-                        <Button className="m-2" variant='success' onClick={e=>me.export(me.templateRef3, "avatar")}>
+                        <Button className="m-2" variant='success' onClick={e=>me.export("avatar")}>
                             <I.Download/> Guardar imagen
                         </Button>
                     </div>
-                    <div className="pefil-foto" ref={me.templateRef3}>
+                    <div className="pefil-foto" ref={me.getRef("avatar")}>
                         <div className="template template-3">
                             <span>
                                 {me.state.name}

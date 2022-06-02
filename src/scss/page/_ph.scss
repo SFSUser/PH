@@ -54,10 +54,10 @@ $templates: "/img/template1.png","/img/template2.png","/img/template3.png";
     padding-top: 110px;
     padding-right: 20px;
     span {
-        font-weight: 400;
+        font-weight: 700;
         opacity: 1;
         font-size: 70px;
-        color: red;
+        color: $purple;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
