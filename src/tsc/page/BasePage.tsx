@@ -8,6 +8,29 @@ import Helmet from 'react-helmet';
 import html2canvas from 'html2canvas'
 import 'animate.css';
 
+const INVITACION = "Generador de foto de perfil #pactosabroso #pactohistorico (Nombres)"
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  HatenaShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  OKShareButton,
+  PinterestShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton
+} from "react-share";
+
 /**
  * BasePage component (Common for all pages components)
  * @class BasePage
@@ -135,6 +158,24 @@ export default class BasePage extends Component<any, any> {
                     </div>
                     <div className="text-center">
                         <b>Créditos: </b>Sam F.S.
+                    </div>
+                    <h1 className="color-3 text-center">POR FAVOR DIFUNDIR</h1>
+                    <div className="p-2 text-center">
+                        <TwitterShareButton title={INVITACION} url={location.href} children={
+                            <Button className="m-2">
+                                <I.Twitter/> Compartir en Twitter
+                            </Button>
+                        }/>
+                        <FacebookShareButton title={INVITACION} url={location.href} children={
+                            <Button className="m-2">
+                                <I.Facebook/> Compartir en Facebook
+                            </Button>
+                        }/>
+                        <WhatsappShareButton title={INVITACION} url={location.href} children={
+                            <Button className="m-2">
+                                <I.Phone/> Compartir en Whatsapp
+                            </Button>
+                         }/>
                     </div>
                 </div>
             </div>
