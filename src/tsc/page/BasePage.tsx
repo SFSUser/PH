@@ -89,9 +89,9 @@ export default class BasePage extends Component<any, any> {
                             <div className="pacto-nombre">
                                 {me.state?.name?.split("")?.map( (l, i) => 
                                     l == "O" ? 
-                                    <span className="letra-o">Ñ</span>
+                                    <span key={i} className="letra-o">Ñ</span>
                                     :
-                                    <span className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
+                                    <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
                                 )}
                                 {!have_o && <span className="paloma"></span>}
                             </div>
