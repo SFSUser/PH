@@ -243,6 +243,26 @@ export default class BasePage extends Component<any, any> {
                             <I.Download/> Descargar imagen
                         </Button>
                     </div>
+                    <div className="template-circle" ref={me.getRef("profile8")}>
+                        <div className="template template-8">
+                            {me.pactoNombre()}
+                        </div>
+                    </div>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile8")}>
+                            <I.Download/> Descargar imagen
+                        </Button>
+                    </div>
+                    <div className="template-circle" ref={me.getRef("profile9")}>
+                        <div className="template template-9">
+                            {me.pactoNombre()}
+                        </div>
+                    </div>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile9")}>
+                            <I.Download/> Descargar imagen
+                        </Button>
+                    </div>
                     <Card className="mb-3">
                         <Card.Body>
                             <h1 className="color-4 text-center">POR FAVOR DIFUNDIR</h1>
