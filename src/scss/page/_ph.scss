@@ -83,13 +83,13 @@ $templates:
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.template-3 {
     border: solid $purple 1px;
+    border-radius: 700px;
+}
+.template-3 {
     height: 700px;
     padding-top: 570px;
-    padding-left: 30px;
+    padding-left: 150px;
     text-align: left!important;
     padding-right: 20px;
     background-size: contain!important;
@@ -97,7 +97,7 @@ $templates:
     span {
         font-weight: 400;
         opacity: 1;
-        font-size: 70px;
+        font-size: 40px;
         color: $purple;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
