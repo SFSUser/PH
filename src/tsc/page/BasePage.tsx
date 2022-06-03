@@ -243,32 +243,40 @@ export default class BasePage extends Component<any, any> {
                             <I.Download/> Descargar imagen
                         </Button>
                     </div>
-                    <div className="text-center">
-                        <b>Créditos: </b>Sam F.S. y Emerson F.S.
-                    </div>
-                    <h1 className="color-4 text-center">POR FAVOR DIFUNDIR</h1>
-                    <div className="p-2 text-center">
-                        <TwitterShareButton title={INVITACION} url={location.href} children={
-                            <Button className="m-2">
-                                <I.Twitter/> Compartir en Twitter
-                            </Button>
-                        }/>
-                        <FacebookShareButton title={INVITACION} url={location.href} children={
-                            <Button className="m-2">
-                                <I.Facebook/> Compartir en Facebook
-                            </Button>
-                        }/>
-                        <WhatsappShareButton title={INVITACION} url={location.href} children={
-                            <Button className="m-2">
-                                <I.Phone/> Compartir en Whatsapp
-                            </Button>
-                         }/>
-                    </div>
-                    <div className="text-center">
-                        <h1 className="color-4">¿NOS RECOMIENDAS UN DISEÑO?</h1>
-                        <b>¡Con gusto lo subiremos!</b> recibimos plantillas y sugerencias de diseño al correo <b>sfstricks@hotmail.com</b>, en breve publicaremos tu diseño. 
-                        No olvides dejar tu nombre para poner los créditos.
-                    </div>
+                    <Card className="mb-3">
+                        <Card.Body>
+                            <h1 className="color-4 text-center">POR FAVOR DIFUNDIR</h1>
+                            <div className="text-center">
+                                <b>Créditos: </b>Sam F.S. y Emerson F.S.
+                            </div>
+                            <div className="p-2 text-center">
+                                <TwitterShareButton title={INVITACION} url={location.href} children={
+                                    <Button className="m-2">
+                                        <I.Twitter/> Compartir en Twitter
+                                    </Button>
+                                }/>
+                                <FacebookShareButton title={INVITACION} url={location.href} children={
+                                    <Button className="m-2">
+                                        <I.Facebook/> Compartir en Facebook
+                                    </Button>
+                                }/>
+                                <WhatsappShareButton title={INVITACION} url={location.href} children={
+                                    <Button className="m-2">
+                                        <I.Phone/> Compartir en Whatsapp
+                                    </Button>
+                                }/>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                    <Card className="mb-3">
+                        <Card.Body>
+                            <div className="text-center">
+                                <h1 className="color-4">¿NOS RECOMIENDAS UN DISEÑO?</h1>
+                                <b>¡Con gusto lo subiremos!</b> recibimos plantillas y sugerencias de diseño al correo <b>sfstricks@hotmail.com</b>, en breve publicaremos tu diseño. 
+                                No olvides dejar tu nombre para poner los créditos.
+                            </div>
+                        </Card.Body>
+                    </Card>
                     <div className="text-center mt-3">
                         <div className="donaciones">
                             <div className="grid-title">Donaciones (Nequi)</div>
