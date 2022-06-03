@@ -140,7 +140,7 @@ export default class BasePage extends Component<any, any> {
                     <div className="text-center">
                         <b className="color-5">Generador de Nombres</b>
                     </div>
-                    <Card className="mt-3">
+                    <Card className="mt-3 mb-3">
                         <Card.Body>
                             <p className="mt-3 mb-3 text-center info-text">
                                 <b>Recomendación:</b> Se recomienda utilizarlo en computador para descargar y visualizar correctamente la imagen.
@@ -162,21 +162,15 @@ export default class BasePage extends Component<any, any> {
                             </div>
                         </Card.Body>
                     </Card>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
-                    <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export("profile")}>
-                            <I.Download/> Guardar imagen
-                        </Button>
-                    </div>
+                    <h3 className="color-4 text-center">Selecciona tu imagen de preferencia</h3>
                     <div ref={me.getRef("profile")}>
                         <div className="template template-1">
                             {me.pactoNombre()}
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR POSTER</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export( "poster")}>
-                            <I.Download/> Guardar imagen
+                        <Button variant='success' onClick={e=>me.export("profile")}>
+                            <I.Download/> Descargar imagen de perfil
                         </Button>
                     </div>
                     <div ref={me.getRef("poster")}>
@@ -186,14 +180,9 @@ export default class BasePage extends Component<any, any> {
                             </span>
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
-                    <div className="text-center mb-3"> 
-                        <input className="d-none" ref={me.inputFileRef} type="file" id="file_photo" onChange={e=>me.preview_image(e)} name="item_image"  />
-                        <Button className="m-2" variant='success' onClick={e=>me.selectImage()}>
-                            <I.Folder/> Cargar foto
-                        </Button>
-                        <Button className="m-2" variant='success' onClick={e=>me.export("avatar")}>
-                            <I.Download/> Guardar imagen
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export( "poster")}>
+                            <I.Download/> Descargar poster
                         </Button>
                     </div>
                     <div className="pefil-foto" ref={me.getRef("avatar")}>
@@ -203,10 +192,13 @@ export default class BasePage extends Component<any, any> {
                             </span>
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
-                    <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export("profile4")}>
-                            <I.Download/> Guardar imagen
+                    <div className="text-center mb-3"> 
+                        <input className="d-none" ref={me.inputFileRef} type="file" id="file_photo" onChange={e=>me.preview_image(e)} name="item_image"  />
+                        <Button className="m-2" variant='success' onClick={e=>me.selectImage()}>
+                            <I.Folder/> Cargar foto
+                        </Button>
+                        <Button className="m-2" variant='success' onClick={e=>me.export("avatar")}>
+                            <I.Download/> Descargar imagen de perfil
                         </Button>
                     </div>
                     <div ref={me.getRef("profile4")}>
@@ -214,10 +206,9 @@ export default class BasePage extends Component<any, any> {
                             {me.pactoNombre()}
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export("profile5")}>
-                            <I.Download/> Guardar imagen
+                        <Button variant='success' onClick={e=>me.export("profile4")}>
+                            <I.Download/> Descargar imagen
                         </Button>
                     </div>
                     <div ref={me.getRef("profile5")}>
@@ -227,10 +218,9 @@ export default class BasePage extends Component<any, any> {
                             </div>
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export("profile6")}>
-                            <I.Download/> Guardar imagen
+                        <Button variant='success' onClick={e=>me.export("profile5")}>
+                            <I.Download/> Descargar imagen
                         </Button>
                     </div>
                     <div ref={me.getRef("profile6")}>
@@ -238,16 +228,20 @@ export default class BasePage extends Component<any, any> {
                             {me.pactoNombre()}
                         </div>
                     </div>
-                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
                     <div className="text-center mb-3">
-                        <Button variant='success' onClick={e=>me.export("profile7")}>
-                            <I.Download/> Guardar imagen
+                        <Button variant='success' onClick={e=>me.export("profile6")}>
+                            <I.Download/> Descargar imagen
                         </Button>
                     </div>
                     <div ref={me.getRef("profile7")}>
                         <div className="template template-7">
                             {me.pactoNombre()}
                         </div>
+                    </div>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile7")}>
+                            <I.Download/> Descargar imagen
+                        </Button>
                     </div>
                     <div className="text-center">
                         <b>Créditos: </b>Sam F.S. y Emerson F.S.
