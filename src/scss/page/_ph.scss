@@ -1,9 +1,9 @@
 
-$purple: #911886;
-$green: #40a32d;
-$red: #e0040b;
-$blue: #00297d;
-$orange: #f29d00;
+$purple: #8F2F91;
+$green: #32AA49;
+$red: #ED2424;
+$blue: #034EA1;
+$orange: #F9A51A;
 
 $colors: $orange, $blue, $red, $green, $purple;
 $templates: 
@@ -179,6 +179,8 @@ $templates:
     margin:auto;
     input{
         text-align: center;
+        border: solid $purple 1px;
+        color: $purple;
     }
 }
 
