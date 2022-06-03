@@ -265,6 +265,11 @@ export default class BasePage extends Component<any, any> {
                          }/>
                     </div>
                     <div className="text-center">
+                        <h1 className="color-4">¿NOS RECOMIENDAS UN DISEÑO?</h1>
+                        <b>¡Con gusto la subiremos!</b> recibimos plantillas y sugerencias de diseño al correo <b>sfstricks@hotmail.com</b>, en breve publicaremos tu diseño. 
+                        No olvides dejar tu nombre para poner los créditos.
+                    </div>
+                    <div className="text-center mt-3">
                         <div className="donaciones">
                             <div className="grid-title">Donaciones (Nequi)</div>
                             <img className="grid-gif" src="https://i.imgur.com/UiCHend.gif"/>
