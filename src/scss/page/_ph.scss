@@ -6,7 +6,14 @@ $blue: #00297d;
 $orange: #f29d00;
 
 $colors: $orange, $blue, $red, $green, $purple;
-$templates: "/img/template1.png","/img/template2.png","/img/template3.png","/img/template4.png","/img/template5.png";
+$templates: 
+"/img/template1.png",
+"/img/template2.png",
+"/img/template3.png",
+"/img/template4.png",
+"/img/template5.png",
+"/img/template6.png",
+"/img/template7.png";
 
 @for $i from 1 through length($colors) {
     $c: nth($colors, $i);
@@ -26,6 +33,15 @@ $templates: "/img/template1.png","/img/template2.png","/img/template3.png","/img
         padding: 0;
         margin-left: -30px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.main-title {
+    height: 180px;
+    .pacto-nombre {
+        span {
+            margin-top: 0px!important;
+        }
     }
 }
 
@@ -105,6 +121,30 @@ $templates: "/img/template1.png","/img/template2.png","/img/template3.png","/img
         color: white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+}
+
+.template-6{
+    height: 700px;
+    /*span {
+        margin-left: 0px;
+        font-weight: 400;
+        opacity: 1;
+        font-size: 70px;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }*/
+}
+
+.template-7{
+    height: 700px;
+    /*span {
+        margin-left: 0px;
+        font-weight: 400;
+        opacity: 1;
+        font-size: 70px;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }*/
 }
 
 .letra-o {

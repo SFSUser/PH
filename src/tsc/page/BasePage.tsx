@@ -98,12 +98,12 @@ export default class BasePage extends Component<any, any> {
         me.inputFileRef.current?.click();
     }
 
-    private pactoNombre(){
+    private pactoNombre(name = this.state?.name){
         let me = this;
-        let have_o = me.state?.name?.includes("O");
+        let have_o = name?.includes("O");
         return (
             <div className="pacto-nombre">
-                {me.state?.name?.split("")?.map( (l, i) => 
+                {name?.split("")?.map( (l, i) => 
                     l == "O" ? 
                     <span key={i} className="letra-o">%</span>
                     :
@@ -134,6 +134,12 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador de Nombres del Pacto Histórico - Pacto Sabroso</title>
                 </Helmet>
                 <div className="fixer">
+                    <div className="text-center main-title">
+                        {me.pactoNombre("PACTO")}
+                    </div>
+                    <div className="text-center">
+                        <b className="color-5">Generador de Nombres</b>
+                    </div>
                     <Card className="mt-3">
                         <Card.Body>
                             <p className="mt-3 mb-3 text-center info-text">
@@ -219,6 +225,28 @@ export default class BasePage extends Component<any, any> {
                             <div className="pacto-nombre">
                                 <span>{me.state.name}</span>
                             </div>
+                        </div>
+                    </div>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile6")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
+                    <div ref={me.getRef("profile6")}>
+                        <div className="template template-6">
+                            {me.pactoNombre()}
+                        </div>
+                    </div>
+                    <h1 className="color-4 text-center">GENERAR FOTO PERFIL</h1>
+                    <div className="text-center mb-3">
+                        <Button variant='success' onClick={e=>me.export("profile7")}>
+                            <I.Download/> Guardar imagen
+                        </Button>
+                    </div>
+                    <div ref={me.getRef("profile7")}>
+                        <div className="template template-7">
+                            {me.pactoNombre()}
                         </div>
                     </div>
                     <div className="text-center">
