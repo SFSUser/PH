@@ -101,7 +101,6 @@ export default class BasePage extends Component<any, any> {
     private pactoNombre(name = this.state?.name){
         let me = this;
         let have_o = name?.includes("O");
-        name = name?.replace(/\s/g, '');
         return (
             <div className="pacto-nombre">
                 {name?.split("")?.map( (l, i) => 
@@ -157,7 +156,7 @@ export default class BasePage extends Component<any, any> {
                                         placeholder="Escribir nombre" 
                                         maxLength={10}
                                         value={me.state?.name} 
-                                        onChange={ e => me.setState({name: e.target.value?.toUpperCase()})}
+                                        onChange={ e => me.setState({name: e.target.value?.replace(/\s/g, '')?.toUpperCase()})}
                                         />
                                 </InputGroup>
                             </div>
