@@ -186,6 +186,10 @@ $templates:
     z-index: 0;
 }
 
+.donaciones {
+    display: flex;
+}
+
 @media only screen and (max-width: 550px) {
     .template {
         transform: scale(0.8);
@@ -193,4 +197,34 @@ $templates:
     .info-text {
         font-size: 30px;
     }
+}
+
+.grid-title {
+    text-align: center;
+    grid-area: title;
+}
+.grid-gif {
+    grid-area: gif;
+}
+.grid-qr {
+    grid-area: qr;
+}
+  
+.donaciones {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-areas:
+    "title  title  title"
+    "gif gif qr";
+    background-color: #fff;
+    color: #444;
+    img {
+        max-height: 100px;
+        width: auto;
+    }
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin: auto;
 }

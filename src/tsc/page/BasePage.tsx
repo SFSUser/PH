@@ -264,6 +264,13 @@ export default class BasePage extends Component<any, any> {
                             </Button>
                          }/>
                     </div>
+                    <div className="text-center">
+                        <div className="donaciones">
+                            <div className="grid-title">Donaciones (Nequi)</div>
+                            <img className="grid-gif" src="https://i.imgur.com/UiCHend.gif"/>
+                            <img className="grid-qr" src="https://i.imgur.com/fjCNJM5.jpg"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
