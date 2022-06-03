@@ -60,6 +60,17 @@ body {
     max-width: 900px;
     margin: auto;
     padding-top: 5%; }
+    .locker .container .card {
+      max-width: 500px;
+      margin: auto; }
+    .locker .container img {
+      margin: auto; }
+
+@media only screen and (max-width: 550px) {
+  .fixer {
+    max-width: auto; }
+  .base-page {
+    width: fit-content; } }
 
 .color-1 {
   color: #f29d00; }
@@ -88,37 +99,106 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
 .template {
+  margin-bottom: 10px;
+  border-radius: 10px;
   display: inline-block;
   text-align: center;
   background-size: cover;
-  width: 700px;
-  height: 700px; }
+  width: 700px; }
   .template-1 {
-    background-image: url("/dist/img/template1.png"); }
+    background-image: url("/img/template1.png"); }
   .template-2 {
-    background-image: url("https://i.imgur.com/Txa2yHl.png"); }
+    background-image: url("/img/template2.png"); }
+  .template-3 {
+    background-image: url("/img/template3.png"); }
+  .template-4 {
+    background-image: url("/img/template4.png"); }
+  .template-5 {
+    background-image: url("/img/template5.png"); }
+
+.template-1 {
+  height: 700px; }
+
+.template-2 {
+  height: 900px;
+  padding-top: 110px;
+  padding-right: 20px; }
+  .template-2 span {
+    font-weight: 700;
+    opacity: 1;
+    font-size: 70px;
+    color: #911886;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+.pefil-foto {
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.template-3 {
+  border: solid #911886 1px;
+  height: 700px;
+  padding-top: 570px;
+  padding-left: 30px;
+  text-align: left !important;
+  padding-right: 20px;
+  background-size: contain !important;
+  margin-bottom: 0px; }
+  .template-3 span {
+    font-weight: 400;
+    opacity: 1;
+    font-size: 70px;
+    color: #911886;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+.template-4 {
+  height: 700px; }
+  .template-4 span {
+    margin-top: 220px !important; }
+
+.template-5 {
+  padding-top: 600px;
+  height: 700px; }
+  .template-5 span {
+    margin-left: 0px;
+    font-weight: 400;
+    opacity: 1;
+    font-size: 70px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
 .letra-o {
   background-position: center;
   background-repeat: no-repeat;
   color: transparent;
   background-size: contain;
-  background-image: url("/dist/img/paloma.png");
+  background-image: url("/img/paloma.png");
   display: inline-block; }
 
 .paloma {
   background-size: cover;
-  background-image: url("/dist/img/paloma.png");
+  background-image: url("/img/paloma.png");
   height: 80px;
   width: 80px;
   margin-bottom: 70px;
   display: inline-block; }
+
+.input-container-ph {
+  max-width: 400px;
+  margin: auto; }
 
 .z-1 {
   z-index: 1; }
 
 .z-0 {
   z-index: 0; }
+
+@media only screen and (max-width: 550px) {
+  .template {
+    transform: scale(0.8); }
+  .info-text {
+    font-size: 30px; } }
 
 .base-page {
   padding-bottom: 100px; }

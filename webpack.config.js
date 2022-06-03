@@ -9,7 +9,7 @@ module.exports = {
     path.resolve(__dirname, 'src', 'tsc/index.tsx')
   ],
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     //'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
@@ -57,8 +57,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      //filename: './[name].[contenthash].css',
-      filename: './[name].css',
+      filename: './[name].[contenthash].css',
+      //filename: './[name].css',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
