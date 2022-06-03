@@ -101,13 +101,14 @@ export default class BasePage extends Component<any, any> {
     private pactoNombre(name = this.state?.name){
         let me = this;
         let have_o = name?.includes("O");
+        name = name?.replace(/\s/g, '');
         return (
             <div className="pacto-nombre">
                 {name?.split("")?.map( (l, i) => 
                     l == "O" ? 
                     <span key={i} className="letra-o">A</span>
                     :
-                    <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
+                    <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-first-letter":(i==0?"first-letter":"")}`}>{l}</span>
                 )}
                 {!have_o && <span className="paloma"></span>}
             </div>
