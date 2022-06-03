@@ -15,6 +15,11 @@ $templates:
 "/img/template6.png",
 "/img/template7.png";
 
+@font-face {
+    font-family: 'objectivity-black';
+    src: url('/fonts/objectivity-black.otf') format("opentype");
+}
+
 @for $i from 1 through length($colors) {
     $c: nth($colors, $i);
 
@@ -24,20 +29,20 @@ $templates:
 }
 .pacto-nombre {
     .no-first-letter {
-        margin-left: 0px!important;
+        margin-left: 30px!important;
     }
     span {
-        margin-top: 230px;
-        font-size: 150px;
+        margin-top: 290px;
+        font-size: 100px;
         opacity: 0.7;
         padding: 0;
-        margin-left: -30px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: -20px;
+        font-family: 'objectivity-black';
     }
 }
 
 .main-title {
-    height: 180px;
+    height: 120px;
     .pacto-nombre {
         span {
             margin-top: 0px!important;
@@ -149,6 +154,7 @@ $templates:
 
 .letra-o {
     background-position: center;
+    background-position-y: 25px;
     background-repeat: no-repeat;
     color:transparent;
     background-size: contain;
@@ -161,7 +167,7 @@ $templates:
     background-image: url('/img/paloma.png');
     height: 80px;
     width: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 25px;
     display:inline-block;
 }
 

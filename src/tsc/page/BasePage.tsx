@@ -105,7 +105,7 @@ export default class BasePage extends Component<any, any> {
             <div className="pacto-nombre">
                 {name?.split("")?.map( (l, i) => 
                     l == "O" ? 
-                    <span key={i} className="letra-o">%</span>
+                    <span key={i} className="letra-o">A</span>
                     :
                     <span key={i} className={`color-${me.getColor(i)} z-${i % 2} ${!have_o && i == 0?"no-":""}first-letter`}>{l}</span>
                 )}
@@ -121,7 +121,7 @@ export default class BasePage extends Component<any, any> {
                 {me.state?.busy &&
                     <div className="locker">
                         <div className="container">
-                            <div className="card text-center">
+                            <div className="card text-center color-4">
                                 <img height={70} width={70} src="/img/paloma.png"/>
                                 <h1>Generando sabrosura...</h1>
                                 <h1>Por favor espera</h1>
