@@ -1,9 +1,9 @@
 
-$purple: #8F2F91;
-$green: #32AA49;
-$red: #ED2424;
-$blue: #034EA1;
-$orange: #F9A51A;
+$purple: #932a99;
+$green: #31aa26;
+$red: #f00102;
+$blue: #0f2a8c;
+$orange: #ff9b04;
 
 $colors: $orange, $blue, $red, $green, $purple;
 $templates: 
@@ -39,9 +39,10 @@ $templates:
     span {
         margin-top: 290px;
         font-size: 100px;
-        opacity: 0.7;
+        opacity: 0.78;
         padding: 0;
         margin-left: -20px;
+        position: relative;
         font-family: 'objectivity-black';
     }
 }
