@@ -134,7 +134,7 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador de Nombres del Pacto Histórico - Pacto Sabroso</title>
                 </Helmet>
                 <div className="fixer">
-                    <div className="text-center main-title">
+                    {/*<div className="text-center main-title">
                         {me.pactoNombre("PACTO")}
                     </div>
                     <div className="text-center">
@@ -172,7 +172,7 @@ export default class BasePage extends Component<any, any> {
                         <Button variant='success' onClick={e=>me.export("profile")}>
                             <I.Download/> Descargar imagen de perfil
                         </Button>
-                    </div>
+                    </div>*/}
                     <div ref={me.getRef("poster")}>
                         <div className="template template-2">
                             <span>
@@ -185,7 +185,7 @@ export default class BasePage extends Component<any, any> {
                             <I.Download/> Descargar poster
                         </Button>
                     </div>
-                    <div className="pefil-foto" ref={me.getRef("avatar")}>
+                    {/*<div className="pefil-foto" ref={me.getRef("avatar")}>
                         <div className="template template-3">
                             <span>
                                 {me.state.name}
@@ -303,7 +303,7 @@ export default class BasePage extends Component<any, any> {
                             <img className="grid-gif" src="https://i.imgur.com/UiCHend.gif"/>
                             <img className="grid-qr" src="https://i.imgur.com/fjCNJM5.jpg"/>
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         );
