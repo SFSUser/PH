@@ -134,7 +134,7 @@ export default class BasePage extends Component<any, any> {
                     <title>Generador de Nombres del Pacto Histórico - Pacto Sabroso</title>
                 </Helmet>
                 <div className="fixer">
-                    {/*<div className="text-center main-title">
+                    <div className="text-center main-title">
                         {me.pactoNombre("PACTO")}
                     </div>
                     <div className="text-center">
@@ -163,7 +163,7 @@ export default class BasePage extends Component<any, any> {
                         </Card.Body>
                     </Card>
                     <h3 className="color-4 text-center">Selecciona tu imagen de preferencia</h3>
-                    <div ref={me.getRef("profile")}>
+                    {/*<div ref={me.getRef("profile")}>
                         <div className="template template-1">
                             {me.pactoNombre()}
                         </div>
