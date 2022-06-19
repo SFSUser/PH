@@ -242,7 +242,7 @@ export default class BasePage extends Component<any, any> {
                         <Button variant='success' onClick={e=>me.export("profile7")}>
                             <I.Download/> Descargar imagen
                         </Button>
-                    </div>
+                    </div>*/}
                     <div className="template-circle" ref={me.getRef("profile8")}>
                         <div className="template template-8">
                             {me.pactoNombre()}
@@ -253,7 +253,7 @@ export default class BasePage extends Component<any, any> {
                             <I.Download/> Descargar imagen
                         </Button>
                     </div>
-                    <div className="template-circle" ref={me.getRef("profile9")}>
+                    {/*<div className="template-circle" ref={me.getRef("profile9")}>
                         <div className="template template-9">
                             {me.pactoNombre()}
                         </div>
