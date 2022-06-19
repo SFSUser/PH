@@ -175,9 +175,7 @@ export default class BasePage extends Component<any, any> {
                     </div>*/}
                     <div ref={me.getRef("poster")}>
                         <div className="template template-2">
-                            <span>
-                                {me.state.name}
-                            </span>
+                            {me.pactoNombre()}
                         </div>
                     </div>
                     <div className="text-center mb-3">

@@ -76,18 +76,13 @@ $templates:
     height: 700px;
 }
 
-.template-2 {
-    height: 900px;
-    padding-top: 110px;
-    padding-right: 20px;
+.template-2{
+    height: 700px;
     span {
-        font-weight: 700;
-        opacity: 1;
-        font-size: 70px;
-        color: $purple;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 145px!important;
     }
 }
+
 
 .pefil-foto{
     border-radius: 10px;
