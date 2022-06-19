@@ -72,31 +72,44 @@ body {
   .base-page {
     width: fit-content; } }
 
+@font-face {
+  font-family: 'objectivity-black';
+  src: url("/fonts/objectivity-black.otf") format("opentype"); }
+
 .color-1 {
-  color: #f29d00; }
+  color: #ff9b04; }
 
 .color-2 {
-  color: #00297d; }
+  color: #0f2a8c; }
 
 .color-3 {
-  color: #e0040b; }
+  color: #f00102; }
 
 .color-4 {
-  color: #40a32d; }
+  color: #31aa26; }
 
 .color-5 {
-  color: #911886; }
+  color: #932a99; }
 
 .pacto-nombre .no-first-letter {
-  margin-left: 0px !important; }
+  margin-left: 55px !important; }
+
+.pacto-nombre .first-letter {
+  margin-left: 2px !important; }
 
 .pacto-nombre span {
-  margin-top: 230px;
-  font-size: 150px;
-  opacity: 0.7;
+  margin-top: 290px;
+  font-size: 100px;
+  opacity: 0.78;
   padding: 0;
-  margin-left: -30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  margin-left: -20px;
+  position: relative;
+  font-family: 'objectivity-black'; }
+
+.main-title {
+  height: 120px; }
+  .main-title .pacto-nombre span {
+    margin-top: 0px !important; }
 
 .template {
   margin-bottom: 10px;
@@ -115,6 +128,14 @@ body {
     background-image: url("/img/template4.png"); }
   .template-5 {
     background-image: url("/img/template5.png"); }
+  .template-6 {
+    background-image: url("/img/template6.png"); }
+  .template-7 {
+    background-image: url("/img/template7.png"); }
+  .template-8 {
+    background-image: url("/img/template8.png"); }
+  .template-9 {
+    background-image: url("/img/template9.png"); }
 
 .template-1 {
   height: 700px; }
@@ -127,20 +148,25 @@ body {
     font-weight: 700;
     opacity: 1;
     font-size: 70px;
-    color: #911886;
+    color: #932a99;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
 .pefil-foto {
   border-radius: 10px;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  border: solid #932a99 1px;
+  border-radius: 700px; }
+
+.template-circle {
+  border-radius: 700px;
+  overflow: hidden; }
 
 .template-3 {
-  border: solid #911886 1px;
   height: 700px;
   padding-top: 570px;
-  padding-left: 30px;
+  padding-left: 150px;
   text-align: left !important;
   padding-right: 20px;
   background-size: contain !important;
@@ -148,14 +174,14 @@ body {
   .template-3 span {
     font-weight: 400;
     opacity: 1;
-    font-size: 70px;
-    color: #911886;
+    font-size: 40px;
+    color: #932a99;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
 .template-4 {
   height: 700px; }
   .template-4 span {
-    margin-top: 220px !important; }
+    margin-top: 260px !important; }
 
 .template-5 {
   padding-top: 600px;
@@ -168,8 +194,23 @@ body {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
+.template-6 {
+  height: 700px; }
+
+.template-7 {
+  height: 700px; }
+
+.template-8 {
+  height: 700px; }
+
+.template-9 {
+  height: 700px; }
+  .template-9 span {
+    margin-top: 270px !important; }
+
 .letra-o {
   background-position: center;
+  background-position-y: 25px;
   background-repeat: no-repeat;
   color: transparent;
   background-size: contain;
@@ -181,12 +222,16 @@ body {
   background-image: url("/img/paloma.png");
   height: 80px;
   width: 80px;
-  margin-bottom: 70px;
+  margin-bottom: 25px;
   display: inline-block; }
 
 .input-container-ph {
   max-width: 400px;
   margin: auto; }
+  .input-container-ph input {
+    text-align: center;
+    border: solid #932a99 1px;
+    color: #932a99; }
 
 .z-1 {
   z-index: 1; }
@@ -194,11 +239,39 @@ body {
 .z-0 {
   z-index: 0; }
 
+.donaciones {
+  display: flex; }
+
 @media only screen and (max-width: 550px) {
   .template {
     transform: scale(0.8); }
   .info-text {
     font-size: 30px; } }
+
+.grid-title {
+  text-align: center;
+  grid-area: title; }
+
+.grid-gif {
+  grid-area: gif; }
+
+.grid-qr {
+  grid-area: qr; }
+
+.donaciones {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-areas: "title  title  title" "gif gif qr";
+  background-color: #fff;
+  color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+  margin: auto; }
+  .donaciones img {
+    max-height: 100px;
+    width: auto; }
 
 .base-page {
   padding-bottom: 100px; }
