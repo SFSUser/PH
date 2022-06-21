@@ -285,7 +285,7 @@ export default class BasePage extends Component<any, any> {
                                 }/>
                             </div>
                         </Card.Body>
-                    </Card>
+                    </Card>*/}
                     <Card className="mb-3">
                         <Card.Body>
                             <div className="text-center">
@@ -301,7 +301,7 @@ export default class BasePage extends Component<any, any> {
                             <img className="grid-gif" src="https://i.imgur.com/UiCHend.gif"/>
                             <img className="grid-qr" src="https://i.imgur.com/fjCNJM5.jpg"/>
                         </div>
-                    </div>*/}
+                    </div>
                 </div>
             </div>
         );
