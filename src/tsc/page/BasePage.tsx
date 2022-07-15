@@ -163,7 +163,7 @@ export default class BasePage extends Component<any, any> {
                         </Card.Body>
                     </Card>
                     <h3 className="color-4 text-center">Selecciona tu imagen de preferencia</h3>
-                    {/*<div ref={me.getRef("profile")}>
+                    <div ref={me.getRef("profile")}>
                         <div className="template template-1">
                             {me.pactoNombre()}
                         </div>
@@ -172,7 +172,7 @@ export default class BasePage extends Component<any, any> {
                         <Button variant='success' onClick={e=>me.export("profile")}>
                             <I.Download/> Descargar imagen de perfil
                         </Button>
-                    </div>*/}
+                    </div>
                     <div ref={me.getRef("poster")}>
                         <div className="template template-2">
                             {me.pactoNombre()}
